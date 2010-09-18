@@ -2733,6 +2733,7 @@ void cmGlobalXCodeGenerator
       archString += *i;
       archString += " ";
       }
+    archString.erase(archString.end()-1);
     buildSettings->AddAttribute("ARCHS", 
                                 this->CreateString(archString.c_str()));
     if(!flagsUsed && sysrootDefault &&
